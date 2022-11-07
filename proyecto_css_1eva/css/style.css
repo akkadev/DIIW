@@ -1,0 +1,170 @@
+/**Importo las fuentes necesarias*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');   /**TITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');    /**SUBTITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');  /**3SUBTITUOS*/
+body {
+    background-image: url("../fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+
+}
+.logoCentro img {
+    display:block;  /**CENTRAMOS IMG*/
+    margin:auto;
+    width: 8em;
+    
+}
+.block {
+    position: relative;
+    margin: auto;
+    background-color: black;
+    width: 9em;
+    padding: 0.3em;
+    margin-top: 3em;
+}
+  
+
+.block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+  
+@keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+  
+  .block:after {
+    filter: blur(50px);
+}
+.container h1 {
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 0.4em;
+    color: white;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-size: 2.5em;
+}
+.container h2 {
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.4em;
+    max-width: 18em;
+}
+.container h3 {
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    max-width: 16em;
+}
+/**BOTONES*/
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.button {
+    margin-top: 2em;
+    width: 10em;
+    height: 2.5em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #010101;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 0.4em;
+}
+  
+button::before {
+  content: '';
+    border-radius: 1000px;
+    width: 10em; height: 2.2em;
+    border: 9px solid #e47e7e;
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+  
+.button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+  
+button:hover::before, button:focus::before {
+    opacity: 1;
+}
+  
+button::after {
+    content: '';
+    width: 10em; height: 2.5em;
+    border-radius: 100%;
+    border: 6px solid #ff0000;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+  
+button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+  
+@keyframes ring {
+    0% {
+      width: 0em;
+      height: 0em;
+      opacity: 1;
+    }
+    100% {
+      width: 12em;
+      height: 5em;
+      opacity: 0;
+    }
+}
