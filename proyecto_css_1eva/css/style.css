@@ -2,32 +2,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');   /**TITULOS*/
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');    /**SUBTITULOS*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');  /**3SUBTITUOS*/
+/**LE DAMOS TAMAÑO AL HTML PARA QUE PILLE TODO*/
+html {
+    height: 100%;
+    width: 100%;
+}
 body {
-    background-image: url("../fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    /**FONDO*/
+    background-image: url("../img/fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
 }
 .container {
-
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.3fr 0.4fr 0.2fr 0.1fr 0.5fr;
 }
+/**ANILLO QUE VA A SALIR AL REDEDOR DE TODOS LOS BOTONES*/
+@keyframes ring {
+    0% {
+        width: 0em;
+        height: 0em;
+        opacity: 1;
+        }
+        100% {
+        width: 12em;
+        height: 5em;
+        opacity: 0;
+        }
+    }
+/**BOTON 1 DE "ENTRAR"*/
+.wrap2 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-top: 2em;
+    margin-right: 0.7em;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 10em;
+}
+/**ANIMACION DEL BTN "ENTRAR"*/
+.btnEntrar {
+    width: 6em;
+    height: 2em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1em;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    /**Para que sirva en todos los navegadores*/
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+.btnEntrar::before {
+    content: '';
+    border-radius: 1em;
+    width: 5.6em;
+    height: 1.7em;
+    border: 0.4em solid #e47e7e;
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    /**Para que sirva en todos los navegadores*/
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+}
+.btnEntrar:hover, .btnEntrar:focus {
+    color: #fcfcfc;
+    transform: translateY(-6px);
+    /**Para que sirva en todos los navegadores*/
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+} 
+.btnEntrar:hover, .btnEntrar:focus {
+    /**Le cambio el color de cuando este pulsado a marron/negro.*/
+    color: #313133;
+    transform: translateY(-6px);
+    /**Para que sirva en todos los navegadores*/
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+}
+.btnEntrar:hover::before, .btnEntrar:focus::before {
+    opacity: 1;
+}
+/**CENTRAMOS Y AJUSTAMOS EL TAMAÑO DEL LOGO Y SU CONTENEDOR*/
 .logoCentro img {
     display:block;  /**CENTRAMOS IMG*/
     margin:auto;
-    width: 8em;
+    width: 10em;
     
 }
 .block {
+    grid-column-start: 1; 
+    grid-row-start: 2;
     position: relative;
     margin: auto;
     background-color: black;
-    width: 9em;
+    width: 10em;
     padding: 0.3em;
-    margin-top: 2em;
 }
-  
-
+/**ANIMACION DEL LOGO*/
 .block:before, .block:after {
     content: '';
     position: absolute;
@@ -41,23 +159,26 @@ body {
     z-index: -1;
     animation: steam 20s linear infinite;
 }
-  
 @keyframes steam {
     0% {
-      background-position: 0 0;
+    background-position: 0 0;
     }
     50% {
-      background-position: 400% 0;
+    background-position: 400% 0;
     }
     100% {
-      background-position: 0 0;
+    background-position: 0 0;
     }
 }
-  
-  .block:after {
+/**BLUR PARA QUE DE EFECTO DE FONDO*/
+.block:after {
     filter: blur(50px);
+    -webkit-filter: blur(50px);
 }
+/**TEXTO*/
 .container h1 {
+    grid-column-start: 1;
+    grid-row-start: 3;
     margin-top: 1em;
     margin-right: 1em;
     margin-left: 1em;
@@ -68,6 +189,8 @@ body {
     font-size: 2.5em;
 }
 .container h2 {
+    grid-column-start: 1;
+    grid-row-start: 4;
     margin-right: auto;
     margin-left: auto;
     color: white;
@@ -77,6 +200,8 @@ body {
     max-width: 18em;
 }
 .container h3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
     margin-right: auto;
     margin-left: auto;
     color: white;
@@ -85,15 +210,17 @@ body {
     font-size: 1em;
     max-width: 16em;
 }
-/**BOTONES*/
+/**BOTON DE "REGISTRARME"*/
 .wrap {
+    grid-column-start: 1;
+    grid-row-start: 6;
+    margin-top: 1em;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .button {
-    margin-top: 2em;
     width: 10em;
     height: 2.5em;
     font-family: 'Titillium Web', sans-serif;
@@ -112,62 +239,14 @@ body {
     outline: none;
     position: relative;
     padding: 0.4em;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
 }
-.wrap2 {
-  margin-top: 1em;
-  margin-right: 0.5em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  line-height: 10em;
-}
-.btnEntrar {
-  width: 5em;
-  height: 2em;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #ffffff;
-  background: #d14f4f;
-  background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
-  border: none;
-  border-radius: 1em;
-  box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -o-border-radius: 1em;
-}
-.btnEntrar::before {
-  content: '';
-  border-radius: 1em;
-  width: 4.4em;
-  height: 1.7em;
-  border: 0.4em solid #e47e7e;
-  box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: all .3s ease-in-out 0s;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -o-border-radius: 1em;
-}
-.btnEntrar:hover, .btnEntrar:focus {
-  color: #fcfcfc;
-  transform: translateY(-6px);
-}
+/**ANIMACIONES BTN "REGISTRARME"*/
 .button::before {
-  content: '';
+    content: '';
     border-radius: 1000px;
     width: 10em; height: 2.2em;
     border: 9px solid #e47e7e;
@@ -179,16 +258,13 @@ body {
     opacity: 0;
     transition: all .3s ease-in-out 0s;
 }
-  
 .button:hover, .button:focus {
-    color: #313133;
+    color: #ffffff;
     transform: translateY(-6px);
-}
-  
+}  
 .button:hover::before, button:focus::before {
     opacity: 1;
-}
-  
+}   
 .button::after {
     content: '';
     width: 10em; height: 2.5em;
@@ -200,22 +276,213 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: ring 1.5s infinite;
-}
-  
+} 
 .button:hover::after, button:focus::after {
     animation: none;
     display: none;
 }
-  
-@keyframes ring {
-    0% {
-      width: 0em;
-      height: 0em;
-      opacity: 1;
+
+/**COOKIES */
+
+.aviso-cookies {
+	display: none;
+	background: #fff;   
+	padding: 20px;
+	width: calc(100% - 40px);
+	max-width: 300px;
+	line-height: 150%;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 100;
+	padding-top: 60px;
+	box-shadow: 0px 2px 20px 10px rgba(222,222,222,.25);
+	text-align: center;
+}
+
+.aviso-cookies.activo {
+	display: block;
+}
+
+.aviso-cookies .galleta {
+	max-width: 100px;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+.aviso-cookies .titulo,
+.aviso-cookies .parrafo {
+	margin-bottom: 15px;
+  color: black;
+}
+
+.aviso-cookies .boton {
+	width: 100%;
+	background: #595959;
+	border: none;
+	color: #fff;
+	font-family: 'Titillium Web', sans-serif;
+	text-align: center;
+	padding: 15px 20px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+
+.aviso-cookies .boton:hover {
+	background: #000;
+}
+
+.aviso-cookies .enlace {
+	color: #4DBFFF;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.aviso-cookies .enlace:hover {
+	text-decoration: underline;
+}
+
+.fondo-aviso-cookies {
+	display: none;
+	background: rgba(0,0,0,.20);
+	position: fixed;
+	z-index: 99;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.fondo-aviso-cookies.activo {
+	display: block;
+}
+/**                     RESPONSIVE                                                                                      */
+
+
+@media only screen and (min-width: 600px) { 
+  .container { 
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr; 
+  } 
+  /**LOGO*/
+  .block {
+    grid-column-start: 1;  
+    grid-row-start: 1;  
+    position: relative;
+    margin: auto;
+    grid-row-start: 1;
+    width: 15em;
+    height: 3em;
+  }
+  .logoCentro img {
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    display:-webkit-box;  
+    width: 100%;
+  }
+  /**TEXTOS**/
+  .container h1 {
+    grid-column-start: 2; 
+    grid-row-start: 1;  
+    position: relative;
+    font-size: 4em;
+    margin: auto;
+    max-width: 7em;
+  }
+  .container h2 {
+    grid-column-start: 2; 
+    grid-row-start: 2;  
+    position: relative;
+    margin: auto;
+  }
+  .container h3 {
+    grid-column-start: 2; 
+    grid-row-start: 3;  
+    position: relative;
+    margin: auto;
+  }
+  /**                      BOTONES                                                                                       */
+  /**BTN REGISTRARME **/
+  .wrap {
+    grid-column-start: 1; 
+    grid-row-start: 2;
+    position: relative;
+    margin: auto; 
+  }
+  /**BTN ENTRAR*/
+  .wrap2 {
+    grid-column-start: 1; 
+    grid-row-start: 3;   
+    position: relative;
+    margin: auto; 
+  }
+  /**CAMBIAMOS LA ANIMACION DEL BOTON ENTRAR*/
+  .btnEntrar {
+    width: 10em;
+    height: 2.5em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #010101;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 0.4em;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
     }
-    100% {
-      width: 12em;
-      height: 5em;
-      opacity: 0;
+    /**ANIMACIONES BTN "ENTRAR"*/
+    .btnEntrar::before {
+        content: '';
+        border-radius: 1000px;
+        width: 10em; height: 2.2em;
+        border: 9px solid #e47e7e;
+        box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all .3s ease-in-out 0s;
+    }
+    .btnEntrar:hover, .btnEntrar:focus {
+        color: #ffffff;
+        transform: translateY(-6px);
+    }  
+    .btnEntrar:hover::before, .btnEntrar:focus::before {
+        opacity: 1;
+    }   
+    .btnEntrar::after {
+        content: '';
+        width: 10em; height: 2.5em;
+        border-radius: 100%;
+        border: 6px solid #ff0000;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ring 1.5s infinite;
+    } 
+    .btnEntrar:hover::after, .btnEntrar:focus::after {
+        animation: none;
+        display: none;
     }
 }
