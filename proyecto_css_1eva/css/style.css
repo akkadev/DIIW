@@ -6,24 +6,28 @@
 html {
     height: 100%;
     width: 100%;
+    padding: 0; 
+    margin: 0;
 }
 body {
     color: white;
     width: 100%;
     height: 100%;
-    padding: 0;
-    margin: 0 auto;
+    padding: 0; 
+    margin: 0;
     /**FONDO*/
     background-image: url("../img/fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
+    backdrop-filter: brightness(90%);
 }
 .container {
     width: 100%;
     height: 100%;
     display: grid;
+    
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 0.3fr 0.4fr 0.2fr 0.1fr 0.5fr;
 }
@@ -288,7 +292,7 @@ body {
 	display: none;
 	background: #fff;   
 	padding: 20px;
-	width: calc(100% - 40px);
+	width: calc(100% - 80px);
 	max-width: 300px;
 	line-height: 150%;
 	border-radius: 10px;
@@ -398,15 +402,11 @@ body {
   }
   .container h2 {
     grid-column-start: 2; 
-    grid-row-start: 2;  
-    position: relative;
-    margin: auto;
+    grid-row-start: 2;   
   }
   .container h3 {
     grid-column-start: 2; 
-    grid-row-start: 3;  
-    position: relative;
-    margin: auto;
+    grid-row-start: 3;   
   }
   /**                      BOTONES                                                                                       */
   /**BTN REGISTRARME **/
@@ -442,17 +442,14 @@ body {
     cursor: pointer;
     outline: none;
     position: relative;
-    padding: 0.4em;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -ms-transition: all 0.3s ease-in-out 0s;
-    -o-transition: all 0.3s ease-in-out 0s;
-    }
+    padding: 0.4em; 
+}
     /**ANIMACIONES BTN "ENTRAR"*/
     .btnEntrar::before {
         content: '';
         border-radius: 1000px;
-        width: 10em; height: 2.2em;
+        width: 10em;
+        height: 2.2em;
         border: 9px solid #e47e7e;
         box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
         position: absolute;
@@ -461,17 +458,30 @@ body {
         transform: translate(-50%, -50%);
         opacity: 0;
         transition: all .3s ease-in-out 0s;
-    }
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transition: all .3s ease-in-out 0s;
+        -moz-transition: all .3s ease-in-out 0s;
+        -ms-transition: all .3s ease-in-out 0s;
+        -o-transition: all .3s ease-in-out 0s;
+}
     .btnEntrar:hover, .btnEntrar:focus {
         color: #ffffff;
         transform: translateY(-6px);
-    }  
+        -webkit-transform: translateY(-6px);
+        -moz-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        -o-transform: translateY(-6px);
+}  
     .btnEntrar:hover::before, .btnEntrar:focus::before {
         opacity: 1;
     }   
     .btnEntrar::after {
         content: '';
-        width: 10em; height: 2.5em;
+        width: 10em;
+        height: 2.5em;
         border-radius: 100%;
         border: 6px solid #ff0000;
         position: absolute;
@@ -480,9 +490,45 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         animation: ring 1.5s infinite;
-    } 
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-animation: ring 1.5s infinite;
+} 
     .btnEntrar:hover::after, .btnEntrar:focus::after {
         animation: none;
         display: none;
     }
+}
+@media only screen and (min-width: 1020px) {  
+  /**LOGO*/
+  .block {
+    grid-column-start: 1;  
+    grid-row-start: 1;   
+  } 
+  /**TEXTOS**/
+  .container h1 {
+    grid-column-start: 2; 
+    grid-row-start: 1;   
+  }
+  .container h2 {
+    grid-column-start: 1; 
+    grid-row-start: 2; 
+  }
+  .container h3 {
+    grid-column-start: 1; 
+    grid-row-start: 3;  
+  }
+  /**                      BOTONES                                                                                       */
+  /**BTN REGISTRARME **/
+  .wrap {
+    grid-column-start: 2; 
+    grid-row-start: 2;   
+  }
+  /**BTN ENTRAR*/
+  .wrap2 {
+    grid-column-start: 2; 
+    grid-row-start: 3;  
+  }
 }
