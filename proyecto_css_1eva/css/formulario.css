@@ -29,12 +29,12 @@ body {
     display: grid;
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.3fr 0.4fr 0.5fr 0.2fr;
+    grid-template-rows: 0.5fr 0.3fr 0.4fr 0.5fr 0.2fr; 
 }
 form {
     text-transform: uppercase;
     grid-column: 1; 
-    grid-row: 3;
+    grid-row: 3; 
 }
 /**CENTRAMOS Y AJUSTAMOS EL TAMAÑO DEL LOGO Y SU CONTENEDOR*/
 .logoCentro img {
@@ -162,7 +162,11 @@ input[type=text],input[type=password], select {
 label {
     font-family: 'Titillium Web', sans-serif;
 }
-
+/**CONDICIONES DE USO*/
+.condiciones {
+    grid-column: 1;   
+    grid-row: 5;
+}
 /**RESPONSIVE*/
 
 @media only screen and (min-width: 600px) { 
@@ -187,11 +191,16 @@ label {
         grid-column-end: 3; 
         grid-row: 2;
     }
+    .condiciones {
+        grid-column-start: 1;  
+        grid-column-end: 4;   
+        grid-row: 3;
+    }
 }
 @media only screen and (min-width: 1000px) {
-    .container { 
+    .container {  
         grid-template-columns: 1fr 0.5fr 1fr;
-        grid-template-rows: 0.3fr 0.5fr;
+        grid-template-rows: 0.3fr 0.5fr; 
     }
     .block {
         margin-top: 4em;
@@ -218,5 +227,14 @@ label {
         margin: auto;
         grid-column: 3;  
         grid-row: 1; 
+    }
+    .condiciones {
+        grid-column-start: 1;  
+        grid-column-end: 4;   
+        grid-row: 3; 
+        margin: auto;
+        width: 100%;
+        font-size: 1.4em;
+        max-width: 40em;
     }
 }

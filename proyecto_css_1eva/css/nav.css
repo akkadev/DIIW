@@ -10,9 +10,7 @@ html {
     margin: 0;
 }
 /**A TODO*/
-*{
-    padding: 0;
-    margin: 0;
+*{ 
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -36,27 +34,25 @@ body {
     height: 100%;
     display: grid; 
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;
-} 
+    grid-template-rows: 0.3fr 1fr 1fr;
+}  
+
 header {
     grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    height: 4.5em;
+    grid-row: 1;  
     font-family: 'Noto Serif', serif;
-    background-color: black;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.4em;
+    background-color: black; 
+    padding: 0.2em;
+}
+.formato {
+    height: 100%;
 }
 .logo{
-    display: flex;
-    align-items: center;
-
+    grid-column: 1;
+    grid-row: 1;  
 }
 .logo img {
-    height: 2em;
-    margin-right: 0.5em; 
+    width: 100%;   
 } 
 nav a { 
     font-weight: 600;
@@ -64,8 +60,16 @@ nav a {
     color: white; 
 }
 nav a:hover {
-    color red; 
-} 
+    color: red; 
+}  
+.menu { 
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    align-items: center;
+    justify-content: space-between; 
+    
+}
 /**ANIMACION DEL HEADER*/
 header {
     grid-column: 1; 
@@ -73,10 +77,10 @@ header {
     position: relative;
     margin: auto;
     background-color: black;
-    width: 98%;
+    width: 90%;
     height: 100%;
     margin-top: 1em;
-    padding: 0.3em;
+    padding: 0.3em; 
 }
 /**ANIMACION DEL LOGO*/
 header:before, header:after {
@@ -108,8 +112,35 @@ header:after {
     filter: blur(50px);
     -webkit-filter: blur(50px);
 }
-@media only screen and (min-width: 700px) { 
+@media only screen and (min-width: 700px) {    
+    .logo img {
+        width: 40%;   
+        display:block;  /**CENTRAR IMG*/
+        margin:auto;
+    } 
+    .menu {
+         flex-direction: row; 
+         gap: 4em;
+         justify-content: center;
+    }
+}
+@media only screen and (min-width: 1000px) { 
     header {
+        display: flex;
         flex-direction: row;
     }
+    .formato {
+        width: 100%;
+        display: flex; 
+    }
+    .menu {
+        width: 100%;
+    }
+    .logo {
+        align-self: center;
+    } 
+    .logo img {
+        width: 80%; 
+    }
+
 }
