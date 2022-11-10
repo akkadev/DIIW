@@ -29,7 +29,7 @@ body {
     display: grid;
     
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.3fr 0.4fr 0.2fr 0.1fr 0.5fr;
+    grid-template-rows: 0.2fr 0.3fr 0.4fr 0.2fr 0.1fr;
 }
 /**ANILLO QUE VA A SALIR AL REDEDOR DE TODOS LOS BOTONES*/
 @keyframes ring {
@@ -43,7 +43,7 @@ body {
         height: 5em;
         opacity: 0;
         }
-    }
+}
 /**BOTON 1 DE "ENTRAR"*/
 .wrap2 {
     grid-column-start: 1;
@@ -142,7 +142,7 @@ body {
 }
 .block {
     grid-column-start: 1; 
-    grid-row-start: 2;
+    grid-row-start: 1;
     position: relative;
     margin: auto;
     background-color: black;
@@ -155,13 +155,13 @@ body {
     position: absolute;
     left: -2px;
     top: -2px;
-    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-      #0000ff, #00ff00,#ffff00, #ff0000);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094,       #0000ff, #00ff00,#ffff00, #ff0000);
     background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     z-index: -1;
     animation: steam 20s linear infinite;
+    -webkit-animation: steam 20s linear infinite;
 }
 @keyframes steam {
     0% {
@@ -252,7 +252,8 @@ body {
 .button::before {
     content: '';
     border-radius: 1000px;
-    width: 10em; height: 2.2em;
+    width: 10em;
+    height: 2.2em;
     border: 9px solid #e47e7e;
     box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
     position: absolute;
@@ -260,18 +261,35 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: all .3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
 }
 .button:hover, .button:focus {
     color: #ffffff;
     transform: translateY(-6px);
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
 }  
 .button:hover::before, button:focus::before {
     opacity: 1;
 }   
 .button::after {
     content: '';
-    width: 10em; height: 2.5em;
+    width: 10em;
+    height: 2.5em;
     border-radius: 100%;
     border: 6px solid #ff0000;
     position: absolute;
@@ -280,6 +298,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: ring 1.5s infinite;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-animation: ring 1.5s infinite;
 } 
 .button:hover::after, button:focus::after {
     animation: none;
@@ -290,7 +317,7 @@ body {
 
 .aviso-cookies {
 	display: none;
-	background: #fff;   
+	background: #fff;
 	padding: 20px;
 	width: calc(100% - 80px);
 	max-width: 300px;
@@ -303,6 +330,10 @@ body {
 	padding-top: 60px;
 	box-shadow: 0px 2px 20px 10px rgba(222,222,222,.25);
 	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 .aviso-cookies.activo {
@@ -336,6 +367,14 @@ body {
 	border-radius: 5px;
 	margin-bottom: 15px;
 	font-size: 14px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-transition: .3s ease all;
+	-moz-transition: .3s ease all;
+	-ms-transition: .3s ease all;
+	-o-transition: .3s ease all;
 }
 
 .aviso-cookies .boton:hover {
@@ -442,7 +481,15 @@ body {
     cursor: pointer;
     outline: none;
     position: relative;
-    padding: 0.4em; 
+    padding: 0.4em;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
 }
     /**ANIMACIONES BTN "ENTRAR"*/
     .btnEntrar::before {
@@ -466,6 +513,10 @@ body {
         -moz-transition: all .3s ease-in-out 0s;
         -ms-transition: all .3s ease-in-out 0s;
         -o-transition: all .3s ease-in-out 0s;
+        -webkit-border-radius: 1000px;
+        -moz-border-radius: 1000px;
+        -ms-border-radius: 1000px;
+        -o-border-radius: 1000px;
 }
     .btnEntrar:hover, .btnEntrar:focus {
         color: #ffffff;
@@ -495,6 +546,10 @@ body {
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         -webkit-animation: ring 1.5s infinite;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
 } 
     .btnEntrar:hover::after, .btnEntrar:focus::after {
         animation: none;

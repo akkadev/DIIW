@@ -1,0 +1,115 @@
+/**Importo las fuentes necesarias*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');   /**TITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');    /**SUBTITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');  /**3SUBTITUOS*/
+/**LE DAMOS TAMAÑO AL HTML PARA QUE PILLE TODO*/
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+}
+/**A TODO*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+    margin: 0;
+    /**FONDO*/
+    background-image: url("../img/fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
+    backdrop-filter: brightness(90%);   /**Le ponemos menos brillo*/
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+} 
+header {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    height: 4.5em;
+    font-family: 'Noto Serif', serif;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em;
+}
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+.logo img {
+    height: 2em;
+    margin-right: 0.5em; 
+} 
+nav a { 
+    font-weight: 600;
+    padding-right: 0.4em;
+    color: white; 
+}
+nav a:hover {
+    color red; 
+} 
+/**ANIMACION DEL HEADER*/
+header {
+    grid-column: 1; 
+    grid-row: 1;
+    position: relative;
+    margin: auto;
+    background-color: black;
+    width: 98%;
+    height: 100%;
+    margin-top: 1em;
+    padding: 0.3em;
+}
+/**ANIMACION DEL LOGO*/
+header:before, header:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+@keyframes steam {
+    0% {
+    background-position: 0 0;
+    }
+    50% {
+    background-position: 400% 0;
+    }
+    100% {
+    background-position: 0 0;
+    }
+}
+/**BLUR PARA QUE DE EFECTO DE FONDO*/
+header:after {
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+@media only screen and (min-width: 700px) { 
+    header {
+        flex-direction: row;
+    }
+}
