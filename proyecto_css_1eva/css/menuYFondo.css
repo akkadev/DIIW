@@ -29,27 +29,14 @@ body {
     background-size: cover; 
     backdrop-filter: brightness(90%);   /**Le ponemos menos brillo*/
 }
-.container {
-    width: 100%;
-    height: 100%;
-    display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr;
-}  
 
 header {
-    grid-column: 1;
-    grid-row: 1;  
     font-family: 'Noto Serif', serif;
     background-color: black; 
     padding: 0.2em;
 }
 .formato {
     height: 100%;
-}
-.logo{
-    grid-column: 1;
-    grid-row: 1;  
 }
 .logo img {
     width: 100%;   
@@ -71,11 +58,7 @@ nav a:hover {
     
 }
 /**ANIMACION DEL HEADER*/
-header {
-    grid-column: 1; 
-    grid-row: 1;
-    position: relative;
-    margin: auto;
+header { 
     background-color: black;
     width: 90%;
     height: 100%;
@@ -88,13 +71,13 @@ header:before, header:after {
     position: absolute;
     left: -2px;
     top: -2px;
-    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-      #0000ff, #00ff00,#ffff00, #ff0000);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094,       #0000ff, #00ff00,#ffff00, #ff0000);
     background-size: 400%;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     z-index: -1;
     animation: steam 20s linear infinite;
+    -webkit-animation: steam 20s linear infinite;
 }
 @keyframes steam {
     0% {
@@ -112,6 +95,7 @@ header:after {
     filter: blur(50px);
     -webkit-filter: blur(50px);
 }
+
 @media only screen and (min-width: 700px) {    
     .logo img {
         width: 40%;   
@@ -119,9 +103,9 @@ header:after {
         margin:auto;
     } 
     .menu {
-         flex-direction: row; 
-         gap: 4em;
-         justify-content: center;
+        flex-direction: row; 
+        gap: 4em;
+        justify-content: center;
     }
 }
 @media only screen and (min-width: 1000px) { 
