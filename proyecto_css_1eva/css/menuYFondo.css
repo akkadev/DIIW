@@ -94,7 +94,9 @@ header:before, header:after {
 header:after {
     filter: blur(50px);
     -webkit-filter: blur(50px);
-}
+} 
+
+
 
 @media only screen and (min-width: 700px) {    
     .logo img {
