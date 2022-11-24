@@ -1,0 +1,58 @@
+form {
+    margin: auto;
+    background-color: #e6f3ff;
+    width: 60em;
+    padding: 2em;
+    display: grid;
+    grid-template-areas: 
+            "x g"
+            "n d"
+            "e t"; 
+}
+h1 {
+    grid-area: x;
+    margin: 0;
+}
+p {
+    margin-top: 0; 
+}
+span {
+    color: red;
+}   
+select {
+    width: 100%;
+}
+.text {
+    margin-left: 6em;
+} 
+.parte1 { 
+    width: 100%;
+    grid-area: n;
+    margin-right: 3em; 
+} 
+.parte2 {
+    width: 100%;
+    grid-area: e; 
+}
+.parte3 {
+    width: 100%;
+    grid-area: d; 
+}
+.parte4 {
+    width: 100%;
+    grid-area: t;
+}
+.junto { 
+    display: grid;
+    width: 10em; 
+    grid-template-areas: 
+            "a b";
+    gap: 0.2em;
+    
+}
+.junto1 {  
+    grid-area: a;
+}
+.junto2 { 
+    grid-area: b;
+}

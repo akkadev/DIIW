@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Formulario de alta</h1>
+        <div class="parte1">
+            <hr>    
+            <h2>Nompre y apellidos <span>*</span></h2>
+            <div class="text">
+                <input type="text">
+                <p>Nombre</p>
+                <input type="text">
+                <p>Primer Apellido</p>
+                <input type="text">
+                <p>Segundo Apellido</p>
+            </div>
+        </div>
+        <div class="parte2">
+            <hr>    
+            <h2>Email <span>*</span></h2>
+            <div class="text">
+                <input type="text">
+                <p>usuario@servidor.xx</p> 
+            </div>
+        </div>
+        <div class="parte3">
+            <hr>    
+            <h2>Direccion <span>*</span></h2>
+            <div class="text">
+                <input type="text">
+                <p>Calle, número, piso, puerta</p>
+                <div class="junto">
+                    <div class="junto1">
+                        <input type="text">
+                        <p>Código Postal</p>
+                        <!--Select-->
+                        <select name="select">
+                            <option value="0">--</option> 
+                        </select>
+                        <p>Provincia</p>
+                    </div>
+                    <div class="junto2">
+                        <input type="text">
+                        <p>Municipio</p>
+                        <!--select-->
+                        <select name="select">
+                            <option value="0">--</option> 
+                        </select>
+                        <p>País</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="parte4">
+            <hr>    
+            <h2>Teléfono <span>*</span></h2>
+            <div class="text">
+                <div class="junto">
+                    <div class="junto1">
+                        <input type="number">
+                        <p>Fijo</p>
+                    </div>
+                    <div class="junto2">
+                        <input type="number">
+                        <p>Móvil</p>
+                    </div>
+                    
+            </div>
+        </div>
+    </form>
+</body>
+</html>

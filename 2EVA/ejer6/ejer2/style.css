@@ -1,0 +1,57 @@
+table {
+    border: 3px solid green; 
+    border-collapse: collapse;
+    font-size: .9em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+th, td {
+    border: 1px solid #333; 
+} 
+thead th {
+    line-height: 2.5em;
+    background-color: #F5F5F5;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: .3em;
+    padding-right: .3em;
+}
+tbody th { 
+    text-align: left;
+    width: 150px;
+    background-color: #e6f3ff;
+    margin-left: 40px;
+}
+th img {
+    margin-left: 20px;
+}
+td {
+    line-height: 2.5em;
+    width: 80px;
+}
+caption {
+    caption-side: bottom;
+    width: 200px;
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 4px solid green;
+    text-transform: uppercase;
+}
+tbody tr:nth-child(2n) td {
+    background-color: #FFFFCC;
+}
+tbody tr:nth-child(2n+1) td {
+    background-color: #CCFFCC;
+}
+tbody tr:nth-child(2n) td:hover {
+    background-color: #FFFF66;
+}
+tbody tr:nth-child(2n+1) td:hover {
+    background-color: #66FFCC;
+}
