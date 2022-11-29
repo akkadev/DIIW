@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <form action="#">
+        <div class="parte1 form">
+            <h1>Primera parte del formulario</h1>
+            <div>
+                <label for="trato">Trato:</label>
+                <input type="text" id="trato">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" autofocus  required>
+            </div>
+            <div>
+                <label for="url">URL:</label>
+                <input type="text" id="url" required>
+            </div>
+            <div>
+                <label for="date">Seleccione una fecha:</label>
+                <input type="date" id="date">
+            </div>
+            <div>
+                <label for="archivo">Suba los archivos:</label>
+                <input type="file" id="archivo" multiple>
+            </div>
+            <div>
+                <label for="hora">La hora:</label>
+                <input type="time" id="hora">
+            </div>
+            <div>
+                <label for="datetime">El día:</label>
+                <input type="datetime-local" id="dadatetime">
+            </div>
+            <div>
+                <label for="mes">El mes:</label>
+                <input type="month" id="mes">
+            </div>
+        </div>
+        <div class="parte2 form">
+            <h1>Segunda parte del formulario</h1>
+            <div>
+                <label for="semana">La semana:</label>
+                <input type="week" id="semana">
+            </div>
+            <div>
+                <label for="numero">Un número:</label>
+                <input type="number" id="numero" min="0" max="100">
+            </div>
+            <div>
+                <label for="rango">Rango:</label>
+                <input type="range" id="rango" step="2" min="0" max="20">
+            </div>
+            <div>
+                <label for="telefono">Tu teléfono:</label>
+                <input type="number" id="telefono">
+            </div>
+            <div>
+                <label for="busqueda">Búsqueda:</label>
+                <input type="search" id="busqueda" placeholder="Busca algo">
+            </div>
+            <div>
+                <label for="color">Qué color:</label>
+                <input type="color" id="color">
+            </div>
+            <div>
+                <label for="contrasena">Introduce una contraseña:</label>
+                <input type="password" id="contrasena" attern="[A-Z]{3}[0-9]{1}">
+            </div>
+        </div>
+        <div class="parte3">
+            <div>
+                <label for="barra1">1ª Parte</label>
+                <meter min="0" max="7" value="4" id="barra1"></meter> 
+                <br>
+                <label for="barra2">2ª Parte</label>
+                <meter min="0" max="7" value="2" id="barra2"></meter>
+            </div>
+            <div class="centrar">
+                <button type="submit">Enviar</button>
+            </div>
+        </div> 
+    </form>
+</body>
+</html>

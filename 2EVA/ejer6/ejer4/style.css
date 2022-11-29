@@ -2,17 +2,22 @@ form {
     margin: auto;
     background-color: #e6f3ff;
     width: 60em;
-    padding: 2em;
+    padding: 2em; 
     display: grid;
     grid-template-areas: 
             "x g"
             "n d"
-            "e t"; 
+            "e t"
+            "f f";
+    gap: 2em;
+}  
+.parte5 {
+    grid-area: f; 
 }
 h1 {
     grid-area: x;
     margin: 0;
-}
+} 
 p {
     margin-top: 0; 
 }
@@ -27,8 +32,7 @@ select {
 } 
 .parte1 { 
     width: 100%;
-    grid-area: n;
-    margin-right: 3em; 
+    grid-area: n; 
 } 
 .parte2 {
     width: 100%;
@@ -55,4 +59,10 @@ select {
 }
 .junto2 { 
     grid-area: b;
+}
+[type="submit"] {
+    width: 14em;
+    margin-top: 2em;
+    margin-left: 57em;
+
 }
