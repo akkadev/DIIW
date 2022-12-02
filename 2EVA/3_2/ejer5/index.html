@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> 
+    <title>Ej5</title>
+</head>
+<body> 
+    <div class="contain">
+        <div id="owl-carousel" class="owl-carousel owl-theme">
+            <div class="item" style="width:250px"><img src="./img/aguila.jpg" alt="img"></div>
+            <div class="item" style="width:100px"><img src="./img/buhoyzorro.jpg" alt="img"></div>
+            <div class="item" style="width:500px"><img src="./img/pez.jpg" alt="img"></div>
+            <div class="item" style="width:100px"><img src="./img/jirafas.jpg" alt="img"></div>
+            <div class="item" style="width:50px"><img src="./img/leon.jpg" alt="img"></div>
+            <div class="item" style="width:250px"><img src="./img/oruga.jpg" alt="img"></div> 
+            <div class="item" style="width:250px"><img src="./img/pez.jpg" alt="img"></div> 
+        </div>
+    </div>
+    <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="owl.carousel.min.js"></script>
+    </footer>
+
+    <script type="text/javascript">
+        $('#owl-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            dots: true,
+            nav: true,
+            items: 2,
+        })
+    </script>
+</body>
+</html>

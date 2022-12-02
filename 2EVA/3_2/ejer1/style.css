@@ -1,0 +1,17 @@
+body { 
+    text-align: center;
+    color: white; 
+}
+h1 {
+    background-color: black; 
+}
+.imgs {
+    width: 60em;
+    margin: auto;
+}
+.imgs a:nth-child(2) img{
+    margin-bottom: 11.8em;
+}
+img {
+    margin: 0.4em;
+}
