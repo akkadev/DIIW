@@ -1,0 +1,60 @@
+$color-red: red;
+$color-grey: grey;
+$color-slategrey: slategrey;
+$color-lightsteelblue: lightsteelblue;
+
+body {
+    padding: 1em 2em;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+li {
+    text-align: center;
+    line-height: 2;
+    background: $color-slategrey;
+}
+div {
+    width: 12em;
+    float: left;
+    margin-right: 2em;
+}
+hr {
+    clear: both;
+    padding-top: 1em;
+    border: 0;
+    border-bottom: 1px solid $color-grey;
+}
+.rojo {
+    color: $color-red;
+}
+
+
+.uno {
+	li {
+        &:nth-child(1) {
+		background: $color-lightsteelblue;
+        }
+    }
+}
+.dos {
+	&:nth-child(2){
+        &:nth-child(3) {
+		background: $color-lightsteelblue;
+        }
+	}
+}
+
+@mixin transformarContenidoColorRadio ($content, $color, $borde: 0) {
+    content: $content;
+    color: $color;
+    border: $borde;
+}
+.tres:before {
+    @include transformarContenidoColorRadio("Soy previo al bloque 3", blue):
+}
+#i1:after {
+    @include transformarContenidoColorRadios("Soy posterior al bloque 2", green, 2);
+}
