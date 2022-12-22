@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+.menu {
+    background-color: #a9a9a9;  
+}
+.cabecera {
+    background-color: #90ee90; 
+}
+.columna1 {
+    background-color: #ffb6c1; 
+}
+.contenido {
+    background-color: #add8e6; 
+}
+.columna2 {
+    background-color: #dda0dd; 
+}
+.header3 {
+    background-color: #008000;
+}
+.num3{
+    background-color: #ffff00;
+}
+.nav3 {
+    background-color: #808080;
+}
+.pie3 {
+    background-color: #adff2f;
+}
