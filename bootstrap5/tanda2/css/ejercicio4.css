@@ -1,0 +1,66 @@
+body{
+    background-color: #bbb;
+}
+header { 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgb(36,142,199)), color-stop(76%, rgb(35,98,153))); 
+    background-image: linear-gradient(rgb(36,142,199) 10%, rgb(35,98,153) 76%); 
+    color: white;
+    margin: 0 auto 10px auto;
+    padding: 5px;
+}
+main{
+    margin: 0 auto 10px auto;
+}
+article{ 
+    background: #fff;
+    -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.25);
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.25); 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    margin:1%; 
+    padding: 2%; 
+}
+footer{
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgb(35,98,153)), color-stop(76%, rgb(36,142,199)));
+    background-image: linear-gradient(rgb(35,98,153) 10%, rgb(36,142,199) 76%); 
+    color:white;
+    margin: 0 auto 10px auto;
+}
+.dropcap{
+    background-color: rgb(36,142,199);
+    border-radius: 60px;
+    color:white;
+    font-weight:bold;
+    padding: 5px 12px;
+}
+.nav-pills > li {
+    border: 1px solid #a6d4ea;
+    border-radius: 5px;
+    margin: 5px 0 5px 0px;
+    padding: 0;
+}
+.nav-pills > li > a {
+    color:#bbb;
+    display: block;
+    margin:0;
+    padding: 0;
+}
+.nav-pills > li + li {
+    margin-left:0px !important;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    background-color: transparent;
+    color:white;
+}
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+    background-color: transparent;
+    color:white;
+}
+
+footer{
+   
+    padding: 5px;
+}
