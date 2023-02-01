@@ -1,0 +1,492 @@
+/**Importo las fuentes necesarias*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');   /**TITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');    /**SUBTITULOS*/  
+/**LE DAMOS TAMAÑO AL HTML PARA QUE PILLE TODO*/ 
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+}
+body {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+    margin: 0;
+    /**FONDO*/
+    background-image: url("../img/fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
+    backdrop-filter: brightness(90%);
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.3fr 0.4fr 0.2fr 0.1fr;
+} 
+/**BOTON 1 DE "ENTRAR"*/
+.wrap2 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-top: 2em;
+    margin-right: 0.7em;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 10em;
+}
+/**ANIMACION DEL BTN "ENTRAR"*/
+.btnEntrar {
+    width: 6em;
+    height: 2em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1em;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    /**Para que sirva en todos los navegadores*/
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+} 
+/**CENTRAMOS Y AJUSTAMOS EL TAMAÑO DEL LOGO Y SU CONTENEDOR*/
+.logoCentro img {
+    display:block;  /**CENTRAMOS IMG*/
+    margin:auto;
+    width: 10em;
+    
+}
+.block {
+    grid-column-start: 1; 
+    grid-row-start: 2;
+    position: relative;
+    margin: auto;
+    background-color: black;
+    width: 10em;
+    padding: 0.3em;
+}
+/**ANIMACION DEL LOGO*/
+.block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094,       #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 10s linear infinite;
+    -webkit-animation: steam 10s linear infinite;
+}
+@keyframes steam {
+    0% {
+    background-position: 0 0;
+    }
+    25% {
+    background-position: 100% 0;
+    }
+    50% {
+    background-position: 0 0;
+    }
+    100% {
+    background-position: 0 0;
+    }
+}
+/**BLUR PARA QUE DE EFECTO DE FONDO*/
+.block:after {
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+/**TEXTO*/
+.container h1 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 0.4em;
+    color: white;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-size: 2.5em;
+}
+.container h2 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.4em;
+    max-width: 18em;
+}
+.container h3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    max-width: 16em;
+}
+/**BOTON DE "REGISTRARME"*/
+.wrap {
+    grid-column-start: 1;
+    grid-row-start: 6;
+    margin-top: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    width: 10em;
+    height: 2.5em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #010101;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 0.4em;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+} 
+
+
+/**COOKIES */
+
+.aviso-cookies {
+	display: none;
+	background: #fff;
+	padding: 20px;
+	width: calc(100% - 80px);
+	max-width: 300px;
+	line-height: 150%;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 100;
+	padding-top: 60px;
+	box-shadow: 0px 2px 20px 10px rgba(222,222,222,.25);
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.aviso-cookies.activo {
+	display: block;
+}
+
+.aviso-cookies .galleta {
+	max-width: 100px;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+.aviso-cookies .titulo,
+.aviso-cookies .parrafo {
+	margin-bottom: 15px;
+  font-family: 'Noto Serif', serif;
+  color: black;
+}
+
+.aviso-cookies .boton {
+	width: 100%;
+	background: black;
+	border: none;
+	color: #fff;
+	font-family: 'Titillium Web', sans-serif;
+	text-align: center;
+	padding: 15px 20px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-transition: .3s ease all;
+	-moz-transition: .3s ease all;
+	-ms-transition: .3s ease all;
+	-o-transition: .3s ease all;
+}
+
+.aviso-cookies .boton:hover {
+	background: white;
+  color: black;
+  border: 1px solid red;
+}
+
+.aviso-cookies .enlace {
+  color: black;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 14px;
+  transition: .2s ease all;
+  -webkit-transition: .2s ease all;
+  -moz-transition: .2s ease all;
+  -ms-transition: .2s ease all;
+  -o-transition: .2s ease all;
+}
+
+.aviso-cookies .enlace:hover {
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  border-radius: 1em;
+  border-bottom: 3px solid red;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+
+.fondo-aviso-cookies {
+	display: none;
+	background: rgba(0,0,0,.20);
+	position: fixed;
+	z-index: 99;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.fondo-aviso-cookies.activo {
+	display: block;
+}
+/**                     RESPONSIVE                                                                                      */
+
+
+@media only screen and (min-width: 600px) { 
+  .container { 
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr; 
+  } 
+  /**LOGO*/
+  .block {
+    grid-column-start: 1;  
+    grid-row-start: 1;  
+    position: relative;
+    margin: auto;
+    grid-row-start: 1;
+    width: 15em;
+    height: 3em;
+  }
+  .logoCentro img {
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    display:-webkit-box;  
+    width: 100%;
+  }
+  /**TEXTOS**/
+  .container h1 {
+    grid-column-start: 2; 
+    grid-row-start: 1;  
+    position: relative;
+    font-size: 4em;
+    margin: auto;
+    max-width: 7em;
+  }
+  .container h2 {
+    grid-column-start: 2; 
+    grid-row-start: 2;   
+  }
+  .container h3 {
+    grid-column-start: 2; 
+    grid-row-start: 3;   
+  }
+  /**                      BOTONES                                                                                       */
+  /**BTN REGISTRARME **/
+  .wrap {
+    grid-column-start: 1; 
+    grid-row-start: 2;
+    position: relative;
+    margin: auto; 
+  }
+  /**BTN ENTRAR*/
+  .wrap2 {
+    grid-column-start: 1; 
+    grid-row-start: 3;   
+    position: relative;
+    margin: auto; 
+  }
+  /**CAMBIAMOS LA ANIMACION DEL BOTON ENTRAR*/
+  .btnEntrar {
+    width: 10em;
+    height: 2.5em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #010101;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 0.4em;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+    /**ANIMACIONES BTN "ENTRAR"*/
+    .btnEntrar::before {
+        content: '';
+        border-radius: 1000px;
+        width: 10em;
+        height: 2.2em;
+        border: 9px solid #e47e7e;
+        box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all .3s ease-in-out 0s;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transition: all .3s ease-in-out 0s;
+        -moz-transition: all .3s ease-in-out 0s;
+        -ms-transition: all .3s ease-in-out 0s;
+        -o-transition: all .3s ease-in-out 0s;
+        -webkit-border-radius: 1000px;
+        -moz-border-radius: 1000px;
+        -ms-border-radius: 1000px;
+        -o-border-radius: 1000px;
+}
+    .btnEntrar:hover, .btnEntrar:focus {
+        color: #ffffff;
+        transform: translateY(-6px);
+        -webkit-transform: translateY(-6px);
+        -moz-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        -o-transform: translateY(-6px);
+}  
+    .btnEntrar:hover::before, .btnEntrar:focus::before {
+        opacity: 1;
+    }   
+    .btnEntrar::after {
+        content: '';
+        width: 10em;
+        height: 2.5em;
+        border-radius: 100%;
+        border: 6px solid #ff0000;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ring 1.5s infinite;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-animation: ring 1.5s infinite;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+} 
+    .btnEntrar:hover::after, .btnEntrar:focus::after {
+        animation: none;
+        display: none;
+    }
+}
+@media only screen and (min-width: 1020px) {  
+  /**LOGO*/
+  .block {
+    grid-column-start: 1;  
+    grid-row-start: 1;   
+  } 
+  /**TEXTOS**/
+  .container h1 {
+    grid-column-start: 2; 
+    grid-row-start: 1;   
+  }
+  .container h2 {
+    grid-column-start: 1; 
+    grid-row-start: 2; 
+  }
+  .container h3 {
+    grid-column-start: 1; 
+    grid-row-start: 3;  
+  }
+  /**                      BOTONES                                                                                       */
+  /**BTN REGISTRARME **/
+  .wrap {
+    grid-column-start: 2; 
+    grid-row-start: 2;   
+  }
+  /**BTN ENTRAR*/
+  .wrap2 {
+    grid-column-start: 2; 
+    grid-row-start: 3;  
+  }
+}
+/*PAGINA QUE SE PUEDE IMPRIMIR*/
+@media print {
+  body { 
+    background-color: #fff;
+  } 
+  .wrap2, .wrap, .block {
+    display:none;
+ }   
+}

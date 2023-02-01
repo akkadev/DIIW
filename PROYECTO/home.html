@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chej Sidi"/>
+    <meta name="description" content="Una página web donde ver tus series y películas">
+    <meta name="keywords" content="SERIES, PELICULAS, GRATIS, ES, Es, es">
+    <link rel="icon" type="image/jpg" href="./img/favicon.png"/>
+    <link rel="stylesheet" href="./css/home.css">
+    <title>HOODFLIX</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="block">
+                <div class="logoCentro">
+                    <a href="#" class="logo"><img src="./img/logo3.png" alt="imagen"></a>
+                </div>
+            </div>
+            <ul class="navigation">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li> 
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <img class="busqueda" src="./img/lupa.png" alt="Imagen">
+            </div>
+            
+        </header> 
+        <div class="media-icons">
+            <a href="#"><img src="./img/facebook.png" alt="Imagen"></a>
+            <a href="#"><img src="./img/instagram.png" alt="Imagen"></a>
+            <a href="#"><img src="./img/twitter.png" alt="Imagen"></a>
+        </div>
+        <div class="promo">
+            <h1>HoodFlix</h1>
+            <p>Nuevos estrenos y mucho más te esperan en HoodFlix!</p>
+        </div>
+        <!-- SLIDER -->
+        <div class="container">  
+            <div class="slider-container"> 
+                <div class="slider">
+                    <a href="#"><img src="./img/endgame.jfif" alt="imagen 1" ></a>
+                </div>
+                <div class="slider">
+                    <a href="#"><img src="./img/andor.jfif" alt="imagen 1" ></a>
+                </div>
+                <div class="slider">
+                    <a href="#"><img src="./img/jedi.jfif" alt="imagen 1" ></a>
+                </div>
+                <div class="slider">
+                    <a href="#"><img src="./img/imperio.jfif" alt="imagen 1" ></a>
+                </div>
+                <div class="prev-button" onclick="plusSlider(-1)">&#10094;</div>
+                <div class="next-button" onclick="plusSlider(1)">&#10095;</div>
+
+                <div class="lines">
+                    <div class="line" onclick="currentSlider(1)"></div>
+                    <div class="line" onclick="currentSlider(2)"></div>
+                    <div class="line" onclick="currentSlider(3)"></div>
+                    <div class="line" onclick="currentSlider(4)"></div>
+                </div>
+            </div>
+        </div> 
+        <!--CARTAS-->
+         <div class="cartas">
+            <div class="card1" id="sobreNosotros">
+                <h1>Sobre Nosotros</h1>
+                <div class="content1">
+                    <p>
+                        HoodFix es un servicio de streaming que funciona mediante suscripción y permite a sus usuarios ver series y películas a través de cualquier dispositivo conectado a internet. Dependiendo de tu plan, también puedes descargar series y películas en cualquier dispositivo.
+
+                    </p>
+                    <p class="maspeque"> 
+                        Si ya tienes una suscripción y te gustaría obtener más información sobre el uso de HoodFlix, no dudes en entrar.
+                    </p>
+                </div>
+                <img src="./img/img.png" alt="imagen">
+            </div>
+            <div class="card2" id="servicios">
+                <h1>Servicios</h1>
+                <div class="content2">
+                    <p>
+                        HoodFlix es un servicio de streaming en el que puedes encontrar una gran cantidad de películas, series, animes, documentales y diversos contenidos en dispositivos que se conecten a Internet. Por una tarifa fija, en 3 franjas de precios, y sin compromiso de permanencia,
+
+                    </p>
+                    <p class="maspeque"> 
+                        podrás acceder a todos los contenidos que quieras sin límites. Desde 7,99 a 17,99 euros al mes, pasando por 12,99.
+                    </p>
+                </div>
+                <img src="./img/img2.png" alt="imagen">
+            </div>
+         </div>
+ 
+        <!-- FOOTER -->
+        <footer id="contacto">
+            <hr>
+            <p>Contacto: hoodflix@gmail.com</p>
+            <p>&copy; 2022-2023 HoodFlix, Inc</p> 
+            <p>Autor: Chej Sidi &copy; 2022-2023</p> 
+        </footer>
+    </main>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/**Importo las fuentes necesarias*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');   /**TITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');    /**SUBTITULOS*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');  /**3SUBTITUOS*/
+/**LE DAMOS TAMAÑO AL HTML PARA QUE PILLE TODO*/
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+}
+body {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+    margin: 0;
+    /**FONDO*/
+    background-image: url("../img/fondo.png");  /**Le asignamos un fondo y que cubra todo sin repetirse. Es responsive.*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
+    backdrop-filter: brightness(90%);
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.3fr 0.4fr 0.5fr 0.2fr; 
+}
+form {
+    text-transform: uppercase;
+    grid-column: 1; 
+    grid-row: 3; 
+}
+/**CENTRAMOS Y AJUSTAMOS EL TAMAÑO DEL LOGO Y SU CONTENEDOR*/
+.logoCentro img {
+    display:block;  /**CENTRAMOS IMG*/
+    margin:auto;
+    width: 10em;
+    
+}
+.block {
+    grid-column: 1; 
+    grid-row: 1;
+    position: relative;
+    margin: auto;
+    margin-top: 1.5em;
+    background-color: black;
+    width: 10em;
+    padding: 0.3em;
+}
+/**ANIMACION DEL LOGO*/
+.block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+@keyframes steam {
+    0% {
+    background-position: 0 0;
+    }
+    50% {
+    background-position: 400% 0;
+    }
+    100% {
+    background-position: 0 0;
+    }
+}
+/**BLUR PARA QUE DE EFECTO DE FONDO*/
+.block:after {
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+/**BOTON DE "ENTRAR"*/
+.wrap {
+    grid-column: 1;
+    grid-row: 6;
+    margin-top: 1em; 
+}
+input[type=submit] {
+    width: 10em;
+    height: 2.5em;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #010101;
+    background: #d14f4f;
+    background: linear-gradient(90deg, rgb(254, 0, 0) 0%, rgb(152, 17, 17) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(209, 79, 79, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 0.4em;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+}
+/**ANIMACIONES BTN "ENTRAR" DEL FORM*/
+input[type=submit]::before {
+    content: '';
+    border-radius: 1000px;
+    width: 10em;
+    height: 2.2em;
+    border: 9px solid #e47e7e;
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+}
+input[type=submit]:hover, input[type=submit]:focus {
+    color: #ffffff;
+    transform: translateY(-6px);
+}  
+ 
+/** FORMULARIO */
+input[type=text],input[type=password], select { 
+    width: 70%;
+    padding: 0.5em 0.5em;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0.2em solid rgb(133, 3, 3);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+}
+label {
+    font-family: 'Titillium Web', sans-serif;
+}
+/**CONDICIONES DE USO*/
+.condiciones {
+    grid-column: 1;   
+    grid-row: 5;
+}
+/**RESPONSIVE*/
+
+@media only screen and (min-width: 600px) { 
+    .container { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+    }
+    .block {
+        grid-column-start: 1;
+        grid-column-end: 3; 
+        grid-row: 1;
+    }
+    form { 
+        grid-column: 1; 
+        grid-row: 2;
+        display: grid;  
+        grid-template-columns: 0.6fr 0.6fr;
+        grid-template-rows: 0.3fr 1fr;
+    }
+    .wrap {
+        grid-column-start: 1;
+        grid-column-end: 3; 
+        grid-row: 2;
+    }
+    .condiciones {
+        grid-column-start: 1;  
+        grid-column-end: 4;   
+        grid-row: 3;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .container {  
+        grid-template-columns: 1fr 0.5fr 1fr;
+        grid-template-rows: 0.3fr 0.5fr; 
+    }
+    .block {
+        margin-top: 4em;
+        grid-column: 2;  
+    } 
+    form {  
+        grid-column-start: 1;  
+        grid-column-end: 4;  
+        grid-row: 2; 
+        display: grid;  
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr;
+    }
+    .datos1 {
+        grid-column: 1; 
+        grid-row: 1; 
+    } 
+    .datos2 {
+        grid-column: 2;  
+        grid-row: 1;
+    } 
+    .wrap {  
+        position: relative;
+        margin: auto;
+        grid-column: 3;  
+        grid-row: 1; 
+    }
+    .condiciones {
+        grid-column-start: 1;  
+        grid-column-end: 4;   
+        grid-row: 3; 
+        margin: auto;
+        width: 100%;
+        font-size: 1.4em;
+        max-width: 40em;
+    }
+}
+/*PAGINA QUE SE PUEDE IMPRIMIR*/
+@media print {
+    body { 
+      background-color: #fff;
+    } 
+    .wrap, .block,  input[type=text], input[type=password],hr{
+      display:none;
+   }   
+}
